@@ -89,7 +89,7 @@ namespace Crud_Using_ADO.Net.Models
             result = cmd.ExecuteNonQuery();
             con.Close();
             return result;
-        }
+        }     
         public int DeleteStudent(int id)
         {
             int result = 0;

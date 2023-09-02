@@ -1,8 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@using(Html.BeginForm())
+{
+    
+    <p>
+        <label>Enter your name</label>
+        @Html.TextBox("username")
+    </p>
+    <p>
+        <label>Select Gender</label>
+        @Html.RadioButton("gender","male")Male
+        @Html.RadioButton("gender","female")Female
+    </p>
+    <p>
+        <label>Select Hobbies</label>
+        <input type="checkbox" name="hobbies" value="sports"/>Sports
+        <input type="checkbox" name="hobbies" value="music"/>Music
+    </p>
+    <p>
+        <label>Select City</label>
+        @Html.DropDownList("cities")
+    </p>
+    <p>
+        <label>Select City</label>
+        @Html.ListBox("list")
+    </p>
+    <p>
+        <label>Your Comments</label>
+        @Html.TextArea("comments")
+    </p>
+    <p>
+        <input type="submit" value="Save"/>
+    </p>
+
+}
